@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penalty system</title>
+</head>
+<body>
+    <h1>Penalty system</h1>
+    Car speed: <input type="number" name="speed" id="speed">
+    <input type="button" value="Verify" onclick="verify()">
+    <div id="result"></div>
+
+    <script>
+        function verify(){
+            var txts = document.querySelector('input#speed')
+            var result = document.querySelector('div#result')
+            var speed = Number(txts.value)
+
+            result.innerHTML = `Your current speed is <strong>${speed}</strong> km/h`
+
+            if(speed > 60){
+                result.innerHTML += `<p>You're <strong>FINED!</strong>`
+            }
+
+            result.innerHTML += `<p>Always drive wearing a seat belt!`
+        }
+    </script>
+</body>
+</html>

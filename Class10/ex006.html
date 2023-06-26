@@ -17,14 +17,28 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="click()">
+    <div id="area">
         Interact
     </div>
 
     <script>
-        function click() {
-            var a = document.getElementById("area")
+        var a = document.getElementById('area')
+        a.addEventListener('click', toClick)
+        a.addEventListener('mouseenter', enter)
+        a.addEventListener('mouseout', leave)
+
+        function toClick() {
             a.innerText = 'Clicked!'
+            a.style.background = 'red'
+        }
+
+        function enter() {
+            a.innerText = 'Came in!'
+        }
+
+        function leave() {
+            a.innerText = 'Left!'
+            a.style.background = 'green'
         }
     </script>
 </body>
