@@ -12,8 +12,23 @@
     </header>
 
     <section>
-        <div>dhghdfsgasdkhg</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, officiis modi recusandae ipsam nemo optio voluptates et ducimus quas sunt esse temporibus deleniti. Recusandae dolore facilis magnam ut amet repellat?</div>
+        <div>
+            <p> Birth Year: 
+                <input type="number" name="txtyear" id="txtyear" min="0">
+            </p>
+            <p> Sexo: 
+                <input type="radio" name="radsex" id="m" checked>
+                <label for="m">Male</label>
+                <input type="radio" name="radsex" id="f">
+                <label for="m">Female</label>
+            </p>
+            <p>
+                <input type="button" value="Verify" onclick="verify()">
+            </p>
+        </div>
+        <div id="res">
+            Fill in the data above to get the result.
+        </div>
     </section>
 
     <footer>
