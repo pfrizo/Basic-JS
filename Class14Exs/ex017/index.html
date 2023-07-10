@@ -6,16 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="load()">
+<body>
     <header>
-        <h1>DAY TIME</h1>
+        <h1>MULTIPLICATION TABLE</h1>
     </header>
 
     <section>
-        <div id="msg"></div>
+        <div id="form">
+            <p> Number:
+                <input type="number" id="ntxt">
+                <input type="button" value="Generate table" onclick="tableGenerate()">
+            </p>
+        </div>
 
-        <div id="photo">
-            <img id="image" src="morning.jpg" alt="Morning photo">
+        <div id="res">
+            <select name="table" id="table" size="10">
+                <option value="0">Type a number</option>
+            </select>
         </div>
     </section>
 
