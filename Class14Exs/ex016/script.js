@@ -17,9 +17,16 @@ function count(){
         }
         res.innerHTML = 'Counting:'
 
-        while(start <= end){
-            p.innerHTML += `${start} &#128073;`
-            start += step
+        if (start > end){
+            while(start >= end){
+                p.innerHTML += `${start} &#128073;`
+                start -= step
+            }
+        } else {
+            while(start <= end){
+                p.innerHTML += `${start} &#128073;`
+                start += step
+            }
         }
     
         p.innerHTML += '&#127937;'
